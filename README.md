@@ -1,8 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js + Clerk Authentication Template
+
+A modern, production-ready template featuring Next.js 14, Clerk Authentication, and Tailwind CSS. This template provides a solid foundation for building secure web applications with built-in authentication and authorization.
+
+## Features
+
+- 🔐 Authentication with [Clerk](https://clerk.com)
+- 🎨 Styling with [Tailwind CSS v4](https://tailwindcss.com)
+- 🚀 Next.js 15 App Router
+- 🛠 Type checking with TypeScript
+- 🐳 Docker support for PostgreSQL
+- 🔥 Clean project structure
+- 🎯 Pre-configured error & 404 pages
+
+## Prerequisites
+
+- Node.js 18+ 
+- Docker and Docker Compose (for PostgreSQL)
+- npm or yarn or pnpm or bun
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/sushil-kamble/next-js-clerk-template.git
+cd your-repo
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Start the PostgreSQL database:
+
+```bash
+docker-compose up -d
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -12,6 +55,24 @@ yarn dev
 pnpm dev
 # or
 bun dev
+```
+
+## Environment Variables
+Check the `.env.example` file for the required environment variables. Create a `.env.local` file and add the required environment variables.
+
+## Docker Commands
+```bash
+# Start the PostgreSQL database
+docker-compose up -d
+
+# Stop the PostgreSQL database
+docker-compose down
+
+# View logs
+docker-compose logs postgres
+
+# Access PostgreSQL CLI
+docker exec -it nextjs_clerk_postgres_template psql -U postgres
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
