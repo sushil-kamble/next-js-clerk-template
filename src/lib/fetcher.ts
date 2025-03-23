@@ -17,7 +17,8 @@ export const fetcher = async <T>(
   });
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    const errorData = await response.json();
+    throw new Error(errorData.error || "Something went wrong");
   }
 
   return response.json();
