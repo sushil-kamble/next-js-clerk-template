@@ -1,6 +1,6 @@
 # Next.js + Clerk Authentication Template
 
-A modern, production-ready template featuring Next.js 14, Clerk Authentication, and Tailwind CSS. This template provides a solid foundation for building secure web applications with built-in authentication and authorization.
+A modern, production-ready template featuring Next.js 15, Clerk Authentication, and Tailwind CSS v4. This template provides a solid foundation for building secure web applications with built-in authentication and authorization.
 
 ## Features
 
@@ -14,7 +14,7 @@ A modern, production-ready template featuring Next.js 14, Clerk Authentication, 
 
 ## Prerequisites
 
-- Node.js 18+ 
+- Node.js 22+ (preferably using `pnpm`)
 - Docker and Docker Compose (for PostgreSQL)
 - npm or yarn or pnpm or bun
 
@@ -24,7 +24,14 @@ A modern, production-ready template featuring Next.js 14, Clerk Authentication, 
 
 ```bash
 git clone https://github.com/sushil-kamble/next-js-clerk-template.git
-cd your-repo
+cd next-js-clerk-template
+```
+
+Alternatively, you can specify a project name:
+
+```bash
+git clone https://github.com/sushil-kamble/next-js-clerk-template.git <<project-name>>
+cd <<project-name>>
 ```
 
 2. Install dependencies:
