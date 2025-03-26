@@ -65,13 +65,35 @@ pnpm install
 bun install
 ```
 
-4. Start the PostgreSQL database:
+4. Create and configure your Clerk project:
+
+- Go to [Clerk Dashboard](https://dashboard.clerk.com)
+- Create a new project
+- Set up a webhook endpoint in your Clerk project settings:
+  - Point to: `/api/clerk/webhook`
+  - Select required events for your webhook
+
+5. Configure your environment:
+- Copy `.env.example` to `.env.local`
+- Add your Clerk API keys and other required variables
+- (Optional) Modify the PostgreSQL container name in `docker-compose.yml` if needed:
+  ```yaml
+  container_name: your_preferred_name  # Default: nextjs_clerk_postgres_template
+  ```
+
+6. Start the PostgreSQL database:
 
 ```bash
 docker-compose up -d
 ```
 
-5. Run the development server:
+7. Test webhook locally (optional):
+```bash
+# Start the tunnel to expose your local server
+pnpm run tunnel
+```
+
+8. Run the development server:
 
 ```bash
 npm run dev
@@ -82,9 +104,6 @@ pnpm dev
 # or
 bun dev
 ```
-
-## Environment Variables
-Check the `.env.example` file for the required environment variables. Create a `.env.local` file and add the required environment variables.
 
 ## Docker Commands
 ```bash
