@@ -34,7 +34,26 @@ git clone https://github.com/sushil-kamble/next-js-clerk-template.git <<project-
 cd <<project-name>>
 ```
 
-2. Install dependencies:
+2. Remove existing git history and initialize as a new repository:
+
+```bash
+# Remove git history
+rm -rf .git
+
+# Initialize new git repository
+git init
+
+# Add your files and create initial commit
+git add .
+git commit -m "Initial commit"
+
+# (Optional) Add your new remote repository
+git remote add origin <your-repository-url>
+git branch -M main
+git push -u origin main
+```
+
+3. Install dependencies:
 
 ```bash
 npm install
@@ -46,13 +65,13 @@ pnpm install
 bun install
 ```
 
-3. Start the PostgreSQL database:
+4. Start the PostgreSQL database:
 
 ```bash
 docker-compose up -d
 ```
 
-4. Run the development server:
+5. Run the development server:
 
 ```bash
 npm run dev
